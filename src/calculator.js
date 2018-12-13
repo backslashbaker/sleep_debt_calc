@@ -1,12 +1,27 @@
-function testFunction(argument) {
-  return argument;
-}
-
-function plusOne(numbers) {
-  const numbersPlus1 = numbers.map((number) => {
-    return number + 1;
-  });
-  return numbersPlus1;
-}
-
-module.exports = { testFunction, plusOne };
+const getSleepHours = day => {
+	switch(day){
+		case 'monday':
+		return 8
+		break;
+		case 'tuesday':
+		return 7
+		break;
+		case 'wednesday':
+		return 6
+		break;
+		case 'thursday':
+		return 5
+		break;
+		case 'friday':
+		return 8
+		break;
+		case 'saturday':
+		return 5
+		break;
+		case 'sunday':
+		return 8
+		break;
+		default:
+		return "Error!"
+	}
+};
