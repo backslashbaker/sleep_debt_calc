@@ -21,7 +21,25 @@ const getSleepHours = day => {
 		case 'sunday':
 		return 8
 		break;
+
 		default:
 		return "Error!"
 	}
+};
+
+const getActualSleepHours = () => {
+return	getSleepHours('monday') + getSleepHours('tuesday')+ getSleepHours('wednesday')+ getSleepHours('thursday')+ getSleepHours('friday')+ getSleepHours('saturday')+ getSleepHours('sunday');
+}
+
+	console.log(getSleepHours('monday'));
+	console.log(getActualSleepHours());
+
+const getIdealSleepHours = () => {
+	let idealHours = 8;
+	return idealhours * 7;
+};
+
+const calculateSleepDebt = () => {
+	const actualSleepHours = getActualSleepHours();
+	const idealSleepHours = getIdealSleepHours();
 };
