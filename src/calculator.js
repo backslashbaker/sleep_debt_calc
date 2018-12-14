@@ -36,10 +36,27 @@ return	getSleepHours('monday') + getSleepHours('tuesday')+ getSleepHours('wednes
 
 const getIdealSleepHours = () => {
 	let idealHours = 8;
-	return idealhours * 7;
+	return idealHours * 7;
 };
 
 const calculateSleepDebt = () => {
 	const actualSleepHours = getActualSleepHours();
 	const idealSleepHours = getIdealSleepHours();
+
+	if(actualSleepHours === idealSleepHours){
+		console.log('You\'ve got the perfect amount of sleep');
+	}
+
+	else if(actualSleepHours > idealSleepHours){
+		console.log("You've got "+ (idealSleepHours - actualSleepHours) + " more sleep than needed";
+	}
+
+	else if(actualSleepHours < idealSleepHours){
+		console.log('You should get some rest')
+	}
+	else {
+		console.log('Error! Something went wrong')
+	}
 };
+
+calculateSleepDebt();
